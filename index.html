@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+                background-color: #63431c;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        div{
+                margin: 10px auto;
+            }
+
+        #fireCanvas{
+                margin-top: 100px;
+            }
+
+        table{
+                border-collapse: collapse;
+                border: 1px solid #000;
+            }
+
+            td{
+                width: 30px;
+                height: 30px;
+                border: 1px solid #000;
+                text-align: center;
+                vertical-align: center;
+                font-family: monospace;
+                font-size: 18px;
+                position: relative;
+            }
+
+            .pixel-index{
+                font-size: 10px;
+                display: inline-block;
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                color: #999;
+            }
+
+            td.pixel{
+                width: 10px;
+                height: 10px;
+                border: 0;
+            }
+
+            .buttons{
+                display: flex;
+                gap: 30px;
+            }
+
+            button{
+                border-radius: 5px;
+                font-size: 20px;
+                align-items: center;
+                border: 1px solid black;
+                transition: all .3s;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background-color: rgb(153, 147, 147);
+            }
+
+            .button{
+                width: 30px;
+            }
+    </style>
+</head>
+<body>
+    <div id="fireCanvas"></div>
+    <div class="buttons">
+        <button class="button" onclick="degradeFireOrigin()">-</button>
+        <button onclick="minFireOrigin()">Min Fire</button>
+        <button onclick="maxFireOrigin()">Max fire</button>
+        <button class="button" onclick="updateFireOrigin()">+</button>
+    </div>
+    <script src="./fire.js"></script>
+</body>
+</html>
